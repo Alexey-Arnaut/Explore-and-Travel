@@ -1,0 +1,34 @@
+$color-black: #202336;
+$color-gray: #B8BECD;
+$color-orange: #FB8F1D;
+$color-white: #FFFFFF;
+
+$primary-color: $color-black;
+$secondary-color: $color-gray;
+$tertiary-color: $color-orange;
+$quaternary-color: $color-white;
+
+@mixin button {
+    padding: 12px 40px;
+    border: 1px solid $tertiary-color;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+@mixin button--inactive {
+    color: $tertiary-color;
+
+    &:hover {
+        color: $quaternary-color;
+        background: $tertiary-color;
+    }
+}
+
+@mixin button--active {
+    color: $quaternary-color;
+    background: $tertiary-color;
+
+    &:hover {
+        background: darken($tertiary-color, 10%);
+    }
+}
