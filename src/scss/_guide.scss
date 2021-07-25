@@ -1,0 +1,32 @@
+.guide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 15px 0;
+    position: relative;
+
+    .icon {
+
+        &:nth-child(2) {
+            top: 30%;
+            left: 10%;
+        }
+        &:nth-child(3) {
+            left: 40%;
+            top: 80%;
+        }
+        &:nth-child(4) {
+            right: 5%;
+            top: 15%;
+        }
+    }
+}
+
+.guide__title { 
+    max-width: 350px;
+}
+
+.guide__subtitle {
+    max-width: 450px;
+    margin: 20px 0 30px;
+}

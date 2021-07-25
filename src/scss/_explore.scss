@@ -1,0 +1,28 @@
+.explore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 150px 15px 0;
+    position: relative;
+
+    .icon {
+
+        &:nth-child(2) {
+            left: 90%;
+            top: 80%;
+        }
+        &:nth-child(3) {
+            left: 50%;
+            top: 30%;
+        }
+    }
+}
+
+.explore__content-title {
+    max-width: 480px;
+}
+
+.explore__content-subtitle {
+    max-width: 450px;
+    margin: 20px 0 30px;
+}

@@ -32,3 +32,17 @@ $quaternary-color: $color-white;
         background: darken($tertiary-color, 10%);
     }
 }
+
+@mixin title {
+    color: $primary-color;
+    font-size: 36px;
+    line-height: 1.6em;
+    font-weight: 700;
+}
+
+@mixin subtitle {
+    color: $secondary-color;
+    font-size: 17px;
+    line-height: 1.6em;
+    font-weight: 300px;
+}

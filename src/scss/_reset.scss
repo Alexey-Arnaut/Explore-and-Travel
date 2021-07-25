@@ -324,6 +324,15 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    pointer-events: none;
+}
+
+path, circle {
+    transition: 0.5s;
+}
+
 button, input {
     background: none;
     border: none;
@@ -349,4 +358,16 @@ button, input {
 
 .button--active {
     @include button--active;
+}
+
+.title {
+    @include title;
+}
+
+.subtitle {
+    @include subtitle;
+}
+
+.icon {
+    position: absolute;
 }

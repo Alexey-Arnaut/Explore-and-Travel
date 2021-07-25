@@ -5,20 +5,6 @@ function select() {
         const selectList = selectItem.querySelector('.offer__content-list');
         const selectListItems = selectList.querySelectorAll('.offer__content-item');
         const selectInput = selectItem.querySelector('.offer__content-field');
-        const formButton = document.querySelector('.offer__content-button');
-
-        formButton.addEventListener('click', event => {
-            event.preventDefault();
-
-            if(selectInput.value == 0) {
-                return
-            } else {
-                selectInput.value = '';
-                formButton.classList.add('button--active');
-                selectBtn.textContent = selectBtn.getAttribute('data-name');
-                
-            }
-        })
 
         selectBtn.addEventListener('click', event => {
             event.preventDefault();

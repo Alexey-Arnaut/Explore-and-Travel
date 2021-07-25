@@ -4,10 +4,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+    position: relative;
 
-.offer__content {
-    width: 100%;
+    .icon {
+        position: absolute;
+
+        &:nth-child(2) {
+            top: 50%;
+        }
+        &:nth-child(3) {
+            bottom: 10%;
+            left: 30%;
+        }   
+        &:nth-child(4) {
+            top: 35%;
+            left: 35%;
+            transform: rotate(25deg);
+        }
+    }
 }
 
 .offer__content-title {
@@ -140,7 +154,10 @@
 }
 
 .offer__content-field {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    bottom: 0;
 }
 
 .offer__content-button {
