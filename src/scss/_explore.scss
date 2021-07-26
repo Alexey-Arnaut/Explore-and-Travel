@@ -26,3 +26,25 @@
     max-width: 450px;
     margin: 20px 0 30px;
 }
+
+.explore__img {
+    margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+    
+    .explore {
+        flex-direction: column;
+    }
+
+    .explore__img {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+
+    .explore__content {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}

@@ -145,11 +145,6 @@ main {
     display: block;
 }
 
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
 hr {
     box-sizing: content-box;
     height: 0;
@@ -316,6 +311,11 @@ body {
     font-family: 'Playfair Display', sans-serif;
 }
 
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -370,4 +370,5 @@ button, input {
 
 .icon {
     position: absolute;
+    z-index: -1;
 }
