@@ -26,6 +26,17 @@
 
 .featured__link {
     display: flex;
+
+    &:hover {
+
+        .featured__link-text {
+            color: $primary-color;
+        }
+
+        .featured__link-icon {
+            transform: translateX(-100%);
+        }
+    }
 }
 
 .featured__link-text {
@@ -33,9 +44,11 @@
     padding-right: 10px;
     font-size: 17px;
     font-weight: 600;
+    transition: 0.5s;
 }
 
 .featured__link-icon {
+    transition: 0.5s;
 
     path {
         color: $tertiary-color;

@@ -49,4 +49,82 @@ function select() {
     });
 };
 
+function navigation() {
+
+    const links = document.querySelectorAll('.link');
+    const header = document.querySelector('.header');
+    const menu = document.querySelector('.header__menu');
+    const html = document.querySelector('html');
+
+    links.forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+
+            menu.classList.remove('header__menu--active');
+            header.classList.remove('header--active');
+            html.style.overflow = 'visible';
+
+            const href = link.getAttribute('href');
+
+            document.querySelector(href).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+
+        });
+    });
+
+    window.onscroll = () => {
+        if (pageYOffset > 200) {
+            header.classList.add('header--sticky');
+        } else {
+            header.classList.remove('header--sticky');
+        };
+    };
+    menu.addEventListener('click', () => {
+        menu.classList.toggle('header__menu--active');
+        header.classList.toggle('header--active');
+
+        if (menu.classList.contains('header__menu--active')) {
+            html.style.overflow = 'hidden';
+        } else {
+            html.style.overflow = 'visible';
+        };
+    });
+};
+
+function slider() {
+
+    const sliderLine = document.querySelector('.testimonials__slider-line');
+    let itemWidth = document.querySelector('.testimonials__slider-item').offsetWidth;
+    const items = document.querySelectorAll('.testimonials__slider-item').length - 1;
+    const buttonPrev = document.querySelector('.button-prev');
+    const buttonNext = document.querySelector('.button-next');
+    let position = 0;
+
+    buttonNext.addEventListener('click', () => {
+
+        position = position + itemWidth;
+
+        if(position > items * itemWidth) {
+            position = 0;
+        };
+
+        sliderLine.style.left = -position + 'px';
+    });
+
+    buttonPrev.addEventListener('click', () => {
+        position = position - itemWidth;
+
+        if(position < 0) {
+            position = items * itemWidth;
+        };
+        sliderLine.style.left = -position + 'px';
+    });
+
+};
+
 select();
+navigation();
+slider();
+window.addEventListener('resize', slider);

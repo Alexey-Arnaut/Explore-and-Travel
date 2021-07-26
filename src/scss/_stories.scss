@@ -28,6 +28,16 @@
 .stories__link {
     display: flex;
     align-items: center;
+
+    &:hover {
+
+        .stories__link-text {
+            color: $primary-color;
+        }
+        .stories__link-icon {
+            transform: translateX(-100%);
+        }
+    }
 }
 
 .stories__link-text {
@@ -35,9 +45,11 @@
     font-size: 17px;
     font-weight: 600;
     margin-right: 10px;
+    transition: 0.5s;
 }
 
 .stories__link-icon {
+    transition: 0.5s;
 
     path {
         stroke: $tertiary-color;

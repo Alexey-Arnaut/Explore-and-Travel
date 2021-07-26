@@ -7,6 +7,7 @@
     padding: 0 15px;
     height: 120px;
     z-index: 99;
+    transition: 0.5s;
 }
 
 .header--sticky {
@@ -23,6 +24,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: $primary-color;
 
     .header__nav-list {
         flex-direction: column;
@@ -95,6 +97,7 @@
         height: 4px;
         border-radius: 8px;
         position: relative;
+        transition: 0.5s;
 
         &::before,
         &::after {
@@ -105,6 +108,7 @@
             left: 0;
             background: $tertiary-color;
             border-radius: 8px;
+            transition: 0.5s;
         }
 
         &::before {
